@@ -1,18 +1,56 @@
-# 🔗 LangChain Practice
+# 🔗 LangChain Sequential Practice
 
-This repository contains my practice and experiments with **LangChain**, a framework used to build applications using Large Language Models (LLMs). ([Wikipedia][1])
+This repository contains a Jupyter Notebook demonstrating **Sequential Chains in LangChain**.
 
 ---
 
 ## 📌 About
 
-The goal of this project is to learn and explore:
+This project focuses on how to use **Sequential Chains** to connect multiple LLM steps together.
 
-* Working with LLMs
-* Prompt templates
-* Chains and workflows
-* Memory handling
-* Agents and tools
+Instead of a single prompt → response, the output of one step is passed as input to the next step, creating a **multi-step workflow**.
+
+Sequential chains help build more advanced AI pipelines compared to one-shot prompts ([Richhiey Thomas][1])
+
+---
+
+## 🧠 What is Sequential Chain?
+
+A Sequential Chain in LangChain:
+
+* Takes input from the user
+* Passes it through multiple LLM steps
+* Each step processes and improves the result
+* Produces a final structured output
+
+👉 Example flow:
+
+```
+Input → Step 1 (Generate content)
+      → Step 2 (Refine / Transform)
+      → Step 3 (Final Output)
+```
+
+---
+
+## 🚀 Features
+
+* Implementation of Sequential Chains
+* Multi-step LLM processing
+* Prompt templates usage
+* Demonstrates chaining outputs between steps
+
+---
+
+## 📓 Notebook Content
+
+The notebook includes:
+
+* Importing LangChain modules
+* Creating prompt templates
+* Building LLM chains
+* Combining multiple chains sequentially
+* Running end-to-end workflow
 
 ---
 
@@ -31,20 +69,21 @@ cd LangChain-Practice
 pip install -r requirements.txt
 ```
 
-3. Run the project:
+3. Open the notebook:
 
 ```bash
-python main.py
+jupyter notebook
 ```
 
 ---
 
-## 🚀 Features
+## ▶️ Usage
 
-* Basic LangChain examples
-* Prompt and chain implementations
-* Simple agent experiments
-* Learning-focused code
+Run the notebook cells step by step to see how:
+
+* Input is processed
+* Each chain contributes to the final result
+* Outputs flow between steps
 
 ---
 
@@ -52,6 +91,8 @@ python main.py
 
 * Python
 * LangChain
-* LLM APIs (OpenAI / Gemini / etc.)
+* Jupyter Notebook
+* LLM APIs (Ollama)
 
 ---
+
